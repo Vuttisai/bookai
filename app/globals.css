@@ -1,13 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=Sevillana&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  height: 100%;
+}
+.cl-userButtonPopoverFooter{
+display: none;
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+  border: none !important;
+  border-radius: 50px !important;
+  
 }
 
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+  background-color: white !important;
+  box-shadow: inset !important;
+  margin-top: 5px !important;
+  border-radius: 50px !important;
+}
+.cl-internal-b3fm6y{
+  display: none;
+}
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input{
+  text-align: center;
+  height: 0.4375px !important;
+
+}
+.res_title{
+  text-align: center;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+.workContainer{
+  @apply container backdrop-blur-xl bg-gray-200 shadow-lg rounded-md flex text-center items-center p-3  hover:shadow-inner
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
