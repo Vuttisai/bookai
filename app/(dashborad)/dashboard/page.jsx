@@ -219,7 +219,7 @@ const DashboardPage = () => {
                   />
                 </div>
                 <div
-                  className="prose max-w-none"
+                  className="prose max-w-none text-black"
                   dangerouslySetInnerHTML={{ __html: formatBookText(result) }}
                 />
               </div>
