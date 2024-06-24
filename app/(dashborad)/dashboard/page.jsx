@@ -12,7 +12,7 @@ import ghost from "../../../public/Ghost.gif";
 import copy from "../../../public/copy.png";
 import tick from "../../../public/tick.png";
 
-const API_KEY = "AIzaSyADi0JTYU8g0FcA4iWJBTBSyASPDScZvcI";
+const API_KEY = "#";
 
 const formatBookText = (bookText) => {
   const lines = bookText.split("\n");
