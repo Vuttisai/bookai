@@ -7,14 +7,7 @@ pipeline {
                 bat 'echo tesing the packages'
             }
         }
-stage('Running') {
-            steps {
-               withSonarQubeEnv('SonarQube'){
-                bat ''' sonar-scanner -Dsonar.projectKey=ProjectNameSonar -Dsonar.projectName='ProjectNameSonar' -Dsonar.host.url=http://localhost:9099'''
-            echo 'SonarQube Analysis Completed'
-               }
-            }
-        }
+
 stage('Build and Push Docker Image'){
 environment{
 DOCKER_IMAGE = "bunny55/first-pipe:${BUILD_NUMBER}"
