@@ -10,7 +10,7 @@ pipeline {
 
 stage('Build and Push Docker Image'){
 environment{
-DOCKER_IMAGE = "bunny55/first-pipe:"%BUILD_NUMBER%""
+DOCKER_IMAGE = "bunny55/first-pipe:{%BUILD_NUMBER%}"
 REGISTRY_CREDENTIALS = credentials('docker-cred')
 }
 steps{
