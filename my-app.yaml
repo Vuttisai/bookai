@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: bunny55/my-app
+          image: bunny55/my-app:replaceImageTag
           ports:
             - containerPort: 3000
           imagePullPolicy: Always
