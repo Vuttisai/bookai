@@ -3,18 +3,16 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'npm install'
+            
                 bat 'echo tesing the packages'
             }
         }
 stage('Running') {
             steps {
-                script {
-                    def scannerHome = tool name: 'SonarQube', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
-                    withSonarQubeEnv('SonarQube') {
-                        bat "${scannerHome}/bin/sonar-scanner"
-                    }
-}
+               withSonarQubeEnv('SonarQube'){
+                bat ''' sonar-scanner -Dsonar.projectKey=ProjectNameSonar -Dsonar.projectName='ProjectNameSonar' -Dsonar.host.url=http://localhost:9099'''
+            echo 'SonarQube Analysis Completed'
+               }
             }
         }
        
