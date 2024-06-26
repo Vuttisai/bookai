@@ -21,6 +21,14 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
+stage('Running') {
+            steps {
+               withSonarQubeEnv('SonarQube'){
+                bat ''' sonar-scanner -Dsonar.projectKey=ProjectNameSonar -Dsonar.projectName='ProjectNameSonar' -Dsonar.host.url=http://localhost:9099'''
+            echo 'SonarQube Analysis Completed'
+               }
+            }
+        }
 
 To learn more about Next.js, take a look at the following resources:
 
